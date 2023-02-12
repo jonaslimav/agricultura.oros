@@ -2,12 +2,12 @@ const path = require('path');
 var express = require('express');
 var app = express();
 
-var htmlPath = path.join(__dirname, 'views');
+var htmlPath = path.join(__dirname, 'vamosplantar');
 
 app.use(express.static(htmlPath));
 
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/loguin.html");
+  response.sendFile(__dirname + "/vamosplantar/loguin.html");
 });
 var porta = process.env.PORT || 8080;
 

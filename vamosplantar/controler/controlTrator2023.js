@@ -24,10 +24,12 @@ var horasTotais = 0;
     var i=0;
    var databaseRef = firebase.database().ref('trator2023/');
     
+
+    
    databaseRef.orderByChild("date").once('value', function (snapshot) {
        snapshot.forEach(function (childSnapshot) {
            var childData = childSnapshot.val();
-               
+           console.log("t aqui");
            if(childData.cpf==cpf){
                horasT= horasT+Number(childData.horas);
             i++;
@@ -40,10 +42,7 @@ var horasTotais = 0;
        console.log(horasT);
        
        
-       if(horasTotais>500 && localStorage.getItem("user")=="wandeilsonviana@hotmail.com"){
-        alert(` Horas ultrapassam o Limite do periodo (500 hrs): ${horasFormat(horasTotais)}!!! `);
-
-       }else if(horasT>5){
+        if(horasT>5){
 
         alert(`CPF existente na base de dados e Horas ultrapassam o Limite: ${horasFormat(horasT)}!!! `);
         

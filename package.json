@@ -1,5 +1,5 @@
 {
-  "name": "sedama",
+  "name": "agricultura.oros",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,7 +24,7 @@
   "bin": "index.js",
   "pkg": {
     "assets": [
-      "views/*"
+      "vamosplantar/*"
     ],
     "targets": [
       "node10"
