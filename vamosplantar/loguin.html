@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="background-color: white">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loguin</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">    
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+        <script src="controler/controlLoguin.js"></script>
+      
+
+
+</head>
+
+<body>
+
+    <div class="container"><br>
+        <div class=" row justify-content-center ">
+        <div class="card text-white dark bg-dark col-4">
+        <article class="card-body">
+            <h4 class="card-title text-center mb-4 mt-1">Login</h4>
+            <hr>
+            <p class="text-success text-center">Vamos Plantar Oros </p>
+            <form action="javascript:login()">
+            <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                 </div>
+                <input name="" class="form-control" placeholder="Email or login" type="email" id="email">
+            </div> <!-- input-group.// -->
+            </div> <!-- form-group// -->
+            <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                 </div>
+                <input class="form-control" placeholder="******" type="password" id="senha">
+            </div> <!-- input-group.// -->
+            </div> <!-- form-group// -->
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+            </div> <!-- form-group// -->
+            </form>
+        </article>
+        </div> <!-- card.// -->
+        </div>
+    </div> 
+
+</body></html>

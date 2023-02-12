@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pro Trator</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/stylleee.css">
+
+</head>
+
+<body style="background-color: #F2f2f2;">
+  
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-database-compat.js"></script>
+
+
+    <script src="controler/controlExec.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SEC. AGRIC. OROS</a>
+     
+        <div class="navbar-brand"  id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="PROTRATOR.html">VAMOS PLANTAR <span class="sr-only">(current)</span></a>
+            </li>
+            
+		  
+            <li class="nav-item">
+                <a class="nav-link" onclick="sair()">   SAIR  </a>   
+            </li>
+          </ul>
+        </div>
+      </nav>
+   
+
+    <div id= "geral" style="margin-top: 20px;">
+        
+        <div class="col">
+            <input class="form-control" placeholder="Atividade Buscar" type="text" id="atvfiltro" onchange="listarfiltro()" ><br>></div>
+        <div id="inf"></div>
+
+        <table class="table table-striped" style="margin-top: 20px;" id="tbl_users_list" ,border="3">
+            <tr>
+                <td scope="col">PRODUTOR</td>
+                <td scope="col">CPF</td>
+                <td scope="col">LOCALIDADE</td>
+                <td scope="col">RG</td>
+                <td scope="col">HORAS</td>
+                <td scope="col">VALOR TOTAL</td>
+                <td scope="col">DATA</td>
+                <td scope="col"> TELEFONE</td>
+                <td scope="col">IMPRIMIR</td>
+               
+                
+            </tr>
+        </table>
+    </div>
+	
+    <div id="divImp">
+	
+	<div id="impressao"></div>
+	
+	
+	</div>
+    </div>
+
+</body>
+
+</html>
