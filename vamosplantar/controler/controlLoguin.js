@@ -34,7 +34,7 @@ function login() {
             auth = user;
             localStorage.setItem("auth",true);
             localStorage.setItem("user",document.getElementById("email").value);
-            window.location.href = "vamosplantar/vamosplantar2023.html";
+            window.location.href = "index.html";
         }).catch(function (error) {
             alert("Falha ao logar");
 
