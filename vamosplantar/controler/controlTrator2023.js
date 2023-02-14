@@ -90,7 +90,7 @@ function listar() {
  
     if(!localStorage.getItem("auth")){
         alert("Necessario fazer login");
-      window.location.href = "loguin.html";
+      window.location.href = "../vamosplantar/loguin.html";
 
     }
 
@@ -241,7 +241,7 @@ function horasFormat(horas){
 function sair(){
 
     localStorage.clear();
-    window.location.href="../login.html";
+    window.location.href="../vamosplantar/loguin.html";
 }
 
 function deletar(key){
