@@ -241,7 +241,7 @@ function horasFormat(horas){
 function sair(){
 
     localStorage.clear();
-    window.location.href="PROTRATOR.html";
+    window.location.href="../login.html";
 }
 
 function deletar(key){
