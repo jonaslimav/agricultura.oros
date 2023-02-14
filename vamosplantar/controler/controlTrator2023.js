@@ -185,6 +185,7 @@ var dataPr =data[6].innerHTML;
 
 
 var x = document.getElementById("geral");
+x.style="background-color: #ffffff;";
 
 x.innerHTML = `
             ________________________________________________________________________________________________________________________________
