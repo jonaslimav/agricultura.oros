@@ -12,7 +12,7 @@
 
 </head>
 
-<body style="background-color: #c5f15c;">
+<body style="background-color: #d3f08f;">
   
     <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
@@ -27,15 +27,15 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">SEC. AGRIC. OROS</a>
+        <a class="navbar-brand"  href="#"><img src="../agrioros.jpeg"  width="200" height="100"> </a>
      
         <div class="navbar-brand"  id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="vamosplantar2023.html">VAMOS PLANTAR <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="vamosplantar2023.html">Vamos Plantar<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" onclick="sair()">   SAIR  </a>   
+                <a class="nav-link" onclick="sair()">   Sair </a>   
             </li>
           </ul>
         </div>
@@ -94,23 +94,23 @@
                 <input type="submit" class="btn btn-primary">
         </form >
     </div>
-        <div class="col">
-            <input class="form-control" placeholder="Atividade Buscar" type="text" id="atvfiltro" onchange="listarfiltro()" ><br>></div>
-        <div id="inf"></div>
+        <div class="col" style="background-color: #ffffff;">
+            <input class="form-control" placeholder="Buscar" type="text" id="atvfiltro" onchange="listarfiltro()" ><br>></div>
+        <div id="inf"style="background-color: #ffffff;"></div>
 
-        <table class="table table-striped" style="margin-top: 20px;" id="tbl_users_list" ,border="3">
+        <table class="table table-striped" style="margin-top: 20px;background-color: #ffffff;" id="tbl_users_list" ,border="3">
             <tr>
-                <td scope="col">PRODUTOR</td>
-                <td scope="col">CPF</td>
-                <td scope="col">LOCALIDADE</td>
-                <td scope="col">OBS</td>
-                <td scope="col">HORAS</td>
-                <td scope="col">VALOR TOTAL</td>
-                <td scope="col">DATA</td>
-                <td scope="col"> TELEFONE</td>
-                <td scope="col">IMPRIMIR</td>
+               <td scope="col"><strong>PRODUTOR</strong></td>
+                <td scope="col"><strong>CPF</strong></td>
+                <td scope="col"><strong>LOCALIDADE</strong></td>
+                <td scope="col"><strong>RG</strong></td>
+                <td scope="col"><strong>HORAS</strong></td>
+                <td scope="col"><strong>VALOR TOTAL</strong></td>
+                <td scope="col"><strong>DATA</strong></td>
+                <td scope="col"> <strong>TELEFONE</strong></td>
+                <td scope="col"><strong>IMPRIMIR</strong></td>
                 
-
+               </strong>
                 
             </tr>
         </table>
