@@ -188,7 +188,7 @@ var x = document.getElementById("geral");
 
 x.innerHTML = `
             ________________________________________________________________________________________________________________________________
-				<h3> Via Produtor</h3> <img src="../vamosplantar.png" height=250 width=95%><h1> 
+				<h3> Via Produtor</h3> <img src="../vamosplantar/vamosplantar.png" height=250 width=95%><h1> 
 				<h1>
                 <br> <strong> PRODUTOR:</strong>&nbsp ${nomePr} &nbsp &nbsp &nbsp &nbsp<strong>CPF:</strong> &nbsp  ${cpf}<br><br>
                 <strong>RG Nº:</strong>&nbsp  ${rgPr}  &nbsp &nbsp &nbsp &nbsp
@@ -201,7 +201,7 @@ x.innerHTML = `
 		
 <br><br><br>
 					_______________________________________________________________________________________________________________________<br>
-					<h3> Via Tratorista</h3><<img src="../vamosplantar.png" height=250 width=95%><h1>
+					<h3> Via Tratorista</h3><<img src="../vamosplantar/vamosplantar.png" height=250 width=95%><h1>
                     <br> <strong> PRODUTOR:</strong>&nbsp ${nomePr} &nbsp &nbsp &nbsp &nbsp<strong>CPF:</strong> &nbsp  ${cpf}<br><br>
                     <strong>RG:</strong>&nbsp ${rgPr}   &nbsp &nbsp &nbsp &nbsp
                     <strong> DATA:</strong>  &nbsp ${dataPr}<br><br>
