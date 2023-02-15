@@ -212,7 +212,19 @@ x.innerHTML = `
 					 <strong>DATA SERVIÇO:______/______/__________</strong><br><br>
 					<strong> ASS. PRODUTOR: _____________________________________</strong><br><br>
 					
-                        </h1>`; 
+                        </h1><br><br><br>
+                        _______________________________________________________________________________________________________________________<br>
+                        <h3> Via Secretaria</h3><<img src="../vamosplantar/vamosplantar.png" height=250 width=95%><h1>
+                        <br> <strong> PRODUTOR:</strong>&nbsp ${nomePr} &nbsp &nbsp &nbsp &nbsp<strong>CPF:</strong> &nbsp  ${cpf}<br><br>
+                        <strong>RG:</strong>&nbsp ${rgPr}   &nbsp &nbsp &nbsp &nbsp
+                        <strong> DATA:</strong>  &nbsp ${dataPr}<br><br>
+                        <strong>LOCALIDADE:</strong>  &nbsp ${localPr} &nbsp &nbsp &nbsp &nbsp 
+                        <strong> QUANT. HORAS:  </strong>  ${horaPr}<br><br>
+                        <strong> VALOR TOTAL:  </strong>  ${valorPr}&nbsp&nbsp&nbsp
+                        <br><br>
+                        <strong> ASS. PRODUTOR: _____________________________________</strong><br><br>
+                        
+                            </h1>`; 
                     
                     
   //  printDiv();
