@@ -195,7 +195,7 @@ x.innerHTML = `
                 <strong>RG Nº:</strong>&nbsp  ${rgPr}  &nbsp &nbsp &nbsp &nbsp
                 <strong> DATA:</strong>  &nbsp ${dataPr} &nbsp&nbsp&nbsp&nbsp&nbsp<br><br> <strong> QUANT. HORAS:  </strong>  ${horaPr} &nbsp&nbsp <br> <br>
                 <strong>LOCALIDADE:</strong>  &nbsp ${localPr} &nbsp&nbsp&nbsp&nbsp <strong> VALOR TOTAL:  </strong>  ${valorPr}<br><br>
-				<strong> TRATORISTA:______________________________________ <br><br>  DATA SERVIÇO:______/______/__________</strong><br>
+				<br><strong> TRATORISTA:______________________________________ <br><br>  DATA SERVIÇO:______/______/__________</strong><br>
 				<br>	
 
                     <h1>_____________________________________________________________________________________________________________________<br>
@@ -209,10 +209,13 @@ x.innerHTML = `
                     <strong>LOCALIDADE:</strong>  &nbsp ${localPr} &nbsp &nbsp &nbsp &nbsp 
                     <strong> QUANT. HORAS:  </strong>  ${horaPr}<br><br>
                     <strong> VALOR TOTAL:  </strong>  ${valorPr}&nbsp&nbsp&nbsp
-					 <strong>DATA SERVIÇO:______/______/__________</strong><br><br>
+					 <strong>DATA SERVIÇO:______/______/__________</strong><br><br><br>
 					<strong> ASS. PRODUTOR: _____________________________________</strong><br><br>
 					
-                        </h1><br><br><br>
+                        </h1><br>
+                        <h1>_____________________________________________________________________________________________________________________<br>
+
+                        <br><br><br>
                         _______________________________________________________________________________________________________________________<br>
                         <h3> Via Secretaria</h3><<img src="../vamosplantar/vamosplantar.png" height=250 width=95%><h1>
                         <br> <strong> PRODUTOR:</strong>&nbsp ${nomePr} &nbsp &nbsp &nbsp &nbsp<strong>CPF:</strong> &nbsp  ${cpf}<br><br>
@@ -221,7 +224,7 @@ x.innerHTML = `
                         <strong>LOCALIDADE:</strong>  &nbsp ${localPr} &nbsp &nbsp &nbsp &nbsp 
                         <strong> QUANT. HORAS:  </strong>  ${horaPr}<br><br>
                         <strong> VALOR TOTAL:  </strong>  ${valorPr}&nbsp&nbsp&nbsp
-                        <br><br>
+                        <br><br><br>
                         <strong> ASS. PRODUTOR: _____________________________________</strong><br><br>
                         
                             </h1>`; 
