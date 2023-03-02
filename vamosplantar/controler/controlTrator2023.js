@@ -299,7 +299,7 @@ function listarfiltro() {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
 
-            if((String(childData.cpf).includes(String(item).toUpperCase())||String(childData.nomeProdutor).includes(String(item).toUpperCase())||String(childData.localidade).includes(String(item).toUpperCase())&&childData.status!="execultado")){
+            if((String(childData.cpf).includes(String(item).toUpperCase())||String(childData.nomeProdutor).includes(String(item).toUpperCase())||String(childData.localidade).includes(String(item).toUpperCase())||String(childData.status).includes(String(item).toUpperCase()))){
                 var row = tblUsers.insertRow(rowIndex);
             var cellNome = row.insertCell(0);
             var cellCPF = row.insertCell(1);
