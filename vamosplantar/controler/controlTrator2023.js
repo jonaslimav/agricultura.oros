@@ -119,9 +119,10 @@ function listar() {
             var cellValor = row.insertCell(5);
             var cellData = row.insertCell(6);
             var cellTel=row.insertCell(7);
-            var cellImprimir = row.insertCell(8);
+            var cellStatus = row.insertCell(8);
+            var cellImprimir = row.insertCell(9);
           
-            var cellUser =row.insertCell(9);
+            var cellUser =row.insertCell(10);
             
             if(childData.telefone==undefined ){
                 childData.telefone="-";
@@ -142,6 +143,8 @@ function listar() {
             cellValor.appendChild(document.createTextNode(childData.valorTotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})));
             cellData.appendChild(document.createTextNode(childData.dataAtual));
             cellTel.appendChild(document.createTextNode(childData.telefone));
+            cellStatus.innerHTML=`<input type="button" class="btn btn" value="${childData.status}." onclick="editStatus('${childKey}')"}/>`;
+
             cellImprimir.innerHTML=`<input type="button" class="btn btn-danger" value="IMPR." onclick="imprimir(this,'${childData.cpf}')"}/>`;
           cellUser.appendChild(document.createTextNode(childData.user?childData.user:""));
 
@@ -279,8 +282,8 @@ function listarfiltro() {
     <td scope="col">VALOR TOTAL</td>
     <td scope="col">DATA</td>
     <td scope="col"> TELEFONE</td>
+    <td scope="col"> STATUS EXEC.</td>
     <td scope="col">IMPRIMIR</td>
-    
    
     
 </tr> `;
@@ -306,10 +309,11 @@ function listarfiltro() {
             var cellValor = row.insertCell(5);
             var cellData = row.insertCell(6);
             var cellTel=row.insertCell(7);
-            var cellImprimir = row.insertCell(8);
+            var cellStatus= row.insertCell(8);
+            var cellImprimir = row.insertCell(9);
             
-            var cellExec = row.insertCell(9);
-                var cellDel = row.insertCell(10);
+           
+         
             
           
             
@@ -321,8 +325,9 @@ function listarfiltro() {
             cellValor.appendChild(document.createTextNode(childData.valorTotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})));
             cellData.appendChild(document.createTextNode(childData.dataAtual));
             cellTel.appendChild(document.createTextNode(childData.telefone));
+            cellStatus.innerHTML=`<input type="button" class="btn btn" value="${childData.status}." onclick="editStatus('${childKey}')"}/>`;
+
             cellImprimir.innerHTML='<input type="button" class="btn btn-danger" value="IMPR." onclick="imprimir(this)"}/>';
-          cellExec.innerHTML=`<input type="button" class="btn btn-danger" value="EXEC." onclick="execultar('${childKey}')"}/>`;
 
 
            if(dataAnt!=childData.dataAtual){
@@ -368,6 +373,47 @@ function execultar(key){
           
             }); 
    window.location.reload();
+      });
+  
+}
+
+
+
+function editStatus(key){
+    var databaseRef = firebase.database().ref('trator2023/');
+
+    databaseRef.orderByChild("date").once('value', function (snapshot) {
+             
+        snapshot.forEach(function (childSnapshot) {
+    
+            var childData = childSnapshot.val();
+            var childKey = childSnapshot.key;
+
+            if(key == childKey){
+
+              
+              var atv2 =prompt("Insira o status da execução EX. FEV TRATORISTA ");
+              
+                  
+        
+                       childData.status= atv2?atv2:" ";
+                       childData.user= localStorage.getItem("user");
+
+                       let updates = {}
+                       updates["/trator2023/" + childKey] = childData;
+                       let produtor_ref = firebase.database().ref();
+                       firebase.database().ref().update(updates);
+                      
+                         
+                       
+                
+             
+            }
+                 
+              
+          
+            }); 
+          window.location.reload();
       });
   
 }
