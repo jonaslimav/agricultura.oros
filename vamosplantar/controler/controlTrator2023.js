@@ -12,10 +12,10 @@ firebase.initializeApp(firebaseConfig);
 
 window.onload = listar;
 
-var valor= 90.0;
 
 function InserirProtocolo() {
     var data= dataAtualFormatada();
+    var valor= document.getElementById("valor").value;
 
 
    var cpf = document.getElementById("cpf").value
@@ -94,6 +94,10 @@ function listar() {
 
     }
 
+
+    var ano= document.getElementById("ano").value;
+
+
     var tblUsers = document.getElementById('tbl_users_list');
     var databaseRef = firebase.database().ref('trator2023/');
     var rowIndex = 1;
@@ -101,11 +105,35 @@ function listar() {
     var dias=0;
     var dataAnt;
     var val=0;
+    tblUsers.innerHTML = `<tr>
+    <td scope="col">PRODUTOR</td>
+    <td scope="col">CPF</td>
+    <td scope="col">LOCALIDADE</td>
+    <td scope="col">OBS</td>
+    <td scope="col">HORAS</td>
+    <td scope="col">VALOR TOTAL</td>
+    <td scope="col">DATA</td>
+    <td scope="col"> TELEFONE</td>
+    <td scope="col"> STATUS EXEC.</td>
+    <td scope="col">IMPRIMIR</td>
+   
+    
+</tr> `;
     databaseRef.orderByChild("date").once('value', function (snapshot) {
         
         snapshot.forEach(function (childSnapshot) {
+
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
+            var ano= document.getElementById("ano").value;
+
+           var anoN = String(childData.dataAtual).slice(-4);
+            if(ano==anoN){
+
+
+
+            
+
             if(childData.status ==undefined){
                 childData.status = "";
             }
@@ -156,6 +184,7 @@ function listar() {
            val = val +childData.valorTotal;
             rowIndex = rowIndex + 1;
             horasTr = horasTr+Number(childData.horas);
+             }
         });
 
         document.getElementById("inf").innerHTML=`<h6>PRODUTORES:&nbsp ${rowIndex-1} &nbsp &nbsp &nbsp QUANT. HORAS A EXECUTAR:&nbsp ${horasTr.toFixed(2)} &nbsp &nbsp &nbsp &nbsp VALOR TOTAL&nbsp:${(val).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h6>`;
@@ -298,7 +327,11 @@ function listarfiltro() {
         snapshot.forEach(function (childSnapshot) {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
+            var ano= document.getElementById("ano").value;
 
+            var anoN = String(childData.dataAtual).slice(-4);
+             if(ano==anoN){
+ 
             if((String(childData.cpf).includes(String(item).toUpperCase())||String(childData.nomeProdutor).includes(String(item).toUpperCase())||String(childData.localidade).includes(String(item).toUpperCase())||String(childData.status).includes(String(item).toUpperCase()))){
                 var row = tblUsers.insertRow(rowIndex);
             var cellNome = row.insertCell(0);
@@ -338,7 +371,7 @@ function listarfiltro() {
             rowIndex = rowIndex + 1;
             horasTr = horasTr+Number(childData.horas);
             }
-            });
+         } });
     
         document.getElementById("inf").innerHTML=`<h6>PRODUTORES:&nbsp ${rowIndex-1} &nbsp &nbsp &nbsp QUANT. HORAS:&nbsp ${horasTr.toFixed(2)} &nbsp &nbsp &nbsp DIAS:&nbsp${dias}&nbsp &nbsp &nbsp VALOR TOTAL&nbsp:${(horasTr*valor).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h6>`;
     });
