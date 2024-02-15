@@ -30,7 +30,7 @@ var horasTotais = 0;
        snapshot.forEach(function (childSnapshot) {
            var childData = childSnapshot.val();
            console.log("t aqui");
-           if(childData.cpf==cpf){
+           if(childData.cpf==cpf && ){
                horasT= horasT+Number(childData.horas);
             i++;
           
@@ -42,7 +42,7 @@ var horasTotais = 0;
        console.log(horasT);
        
        
-        if(horasT>5){
+        if(horasT>7){
 
         alert(`CPF existente na base de dados e Horas ultrapassam o Limite: ${horasFormat(horasT)}!!! `);
         
