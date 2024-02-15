@@ -17,7 +17,7 @@ function InserirProtocolo() {
     var data= dataAtualFormatada();
     var valor= document.getElementById("valor").value;
 
-           var anoN = String(childData.dataAtual).slice(-4);
+          
    var cpf = document.getElementById("cpf").value
 var horasT = 0;
 var horasTotais = 0;
@@ -30,6 +30,7 @@ var horasTotais = 0;
        snapshot.forEach(function (childSnapshot) {
            var childData = childSnapshot.val();
            console.log("t aqui");
+	        var anoN = String(childData.dataAtual).slice(-4);
            if(childData.cpf==cpf && anoN == 2024 ){
                horasT= horasT+Number(childData.horas);
             i++;
