@@ -31,7 +31,7 @@ var horasTotais = 0;
            var childData = childSnapshot.val();
            console.log("t aqui");
 	        var anoN = String(childData.dataAtual).slice(-4);
-           if(childData.cpf==cpf && anoN == 2024 ){
+           if(childData.cpf==cpf && anoN == 2025 ){
                horasT= horasT+Number(childData.horas);
             i++;
           
